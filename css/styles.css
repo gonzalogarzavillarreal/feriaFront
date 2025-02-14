@@ -40,5 +40,7 @@ footer{
 }
 
 img-container {
-   object-fit: contain;      
+   object-fit: contain;
+   text-align: center;
+   vertical-align: middle; 
 }

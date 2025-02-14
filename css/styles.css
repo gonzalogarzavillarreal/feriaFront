@@ -1,0 +1,44 @@
+.bg-title{
+    background-color:red ;
+}
+
+.logo{
+    width: 100px;
+    height: 100px;
+    
+}
+
+section{
+    background-color:#FFFEFEff;
+    padding: 2em;
+}
+
+footer{
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color:black
+}
+
+.navbar {
+    background-color: red;
+}
+.navbar-brand img {
+    height: 50px;
+}
+.footer {
+    background-color: #1c1c1c;
+    color: white;
+    padding: 20px 0;
+}
+.footer a {
+    color: #f8b400;
+    text-decoration: none;
+}
+.footer a:hover {
+    text-decoration: underline;
+}
+
+img-container {
+   object-fit: contain;      
+}

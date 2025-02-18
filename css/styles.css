@@ -45,3 +45,9 @@ img-container {
    vertical-align: middle; 
 }
 
+
+.error {
+    color: red;
+    font-size: 14px;
+    display: none;
+}

@@ -39,6 +39,7 @@
             <div class="col-md-6">
                 <label for="equipo" class="form-label">Nombre del Equipo</label>
                 <input type="text" class="form-control" id="equipo" name="equipo" required>
+                <span class="error" id="error-equipo">Este campo es obligatorio</span>
             </div>
 
             <div class="col-md-6">
@@ -49,11 +50,13 @@
             <div class="col-md-6">
                 <label for="proyecto" class="form-label">Nombre del Proyecto</label>
                 <input type="text" class="form-control" id="proyecto" name="proyecto" required>
+                <span class="error" id="error-proyecto">Este campo es obligatorio</span>
             </div>
 
             <div class="col-md-6">
                 <label for="representante" class="form-label">Representante</label>
                 <input type="text" class="form-control" id="representante" name="representante" required>
+                <span class="error" id="error-representante">Este campo es obligatorio</span>
             </div>
 
             <div class="col-md-6">
@@ -65,11 +68,25 @@
                     <option value="LTI">LTI</option>
                     <option value="IIS">IIS</option>
                 </select>
+                <span class="error" id="error-carrera">Este campo es obligatorio</span>
             </div>
 
             <div class="col-md-6">
                 <label for="tetra" class="form-label">Tetramestre</label>
-                <input type="text" class="form-control" id="tetra" name="tetra" required>
+                <select class="form-select" id="tetra" name="tetra" required>
+                    <option value="">Selecciona un tetramestre</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>    
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option> 
+                </select>
+                <span class="error" id="error-tetra">Este campo es obligatorio</span>
             </div>
 
             <div class="col-md-6">
@@ -79,27 +96,164 @@
                     <option value="matutino">Matutino</option>
                     <option value="nocturno">Nocturno</option>
                 </select>
+                <span class="error" id="error-turno">Este campo es obligatorio</span>
             </div>
 
             <div class="col-md-6">
                 <label for="asesor" class="form-label">Asesor</label>
-                <input type="text" class="form-control" id="asesor" name="asesor" required>
+                <select id="asesor" class="form-select" name="asesor" required>
+                  <option value="">selecciona un asesor</option>
+                   <option value="ACUÑA LEAL DANIEL ARTURO">ACUÑA LEAL DANIEL ARTURO</option>
+                   <option value="ALFARO CARVAJAL REYNA ESTHER">ALFARO CARVAJAL REYNA ESTHER/option> 
+                   <option value="AQUINO ZUÑIGA JULIO CESAR">AQUINO ZUÑIGA JULIO CESAR</option>
+                   <option value="BERNAL ALONSO SERGIO">BERNAL ALONSO SERGIO</option>
+                   <option value="CABRERA RODRIGUEZ IRWINNG">CABRERA RODRIGUEZ IRWINNG</option>
+                   <option value="CARDENAS HERNANDEZ MARIA ISABEL">CARDENAS HERNANDEZ MARIA ISABEL</option>
+                   <option value="CARRETO LIMA  MARIA VALERIA">CARRETO LIMA  MARIA VALERIA</option>
+                   <option value="CONTRERAS BARRERA SANTIAGO">CONTRERAS BARRERA SANTIAGO</option>
+                   <option value="CRUZ IBARRA JUAN MANUEL">CRUZ IBARRA JUAN MANUEL</option>
+                   <option value="DE LA GARZA GARZA PEDRO">DE LA GARZA GARZA PEDRO</option>
+                   <option value="DE LA ROSA GAMES ALMA GLORIA">DE LA ROSA GAMES ALMA GLORIA</option>
+                   <option value="DIAZ GRACIA MARGARITA DE LA LUZ">DIAZ GRACIA MARGARITA DE LA LUZ</option>
+                   <option value="DOMÍNGUEZ GODÍNEZ JAIR OTHONIEL">DOMÍNGUEZ GODÍNEZ JAIR OTHONIEL</option>
+                   <option value="ELIZONDO ARRIAGA GUILLERMO DE JESUS">ELIZONDO ARRIAGA GUILLERMO DE JESUS</option>
+                   <option value="FLORES ALVARADO LILIAN">FLORES ALVARADO LILIAN </option>
+                   <option value="FLORES COLUNGA ALBERTO">FLORES COLUNGA ALBERTO</option>
+                   <option value="FRAGA LOPEZ URSULO">FRAGA LOPEZ URSULO</option>
+                   <option value="FUENTES RAMOS JOSÉ IGNACIO">FUENTES RAMOS JOSÉ IGNACIO</option>
+                   <option value="GALINDO ROMERO LUIS SERVANDO">GALINDO ROMERO LUIS SERVANDO</option>
+                   <option value="GALLEGOS GUERRERO CESAR RAUL">GALLEGOS GUERRERO CESAR RAUL</option>
+                   <option value="GARCIA MONTELONGO GILDARDO">GARCIA MONTELONGO GILDARDO</option>
+                   <option value="GARCIA MONTOYA SABAS J.">GARCIA MONTOYA SABAS J.</option>
+                   <option value="GARZA VILLARREAL GONZALO">GARZA VILLARREAL GONZALO</option>
+                   <option value="GONZALEZ GONZALEZ LUIS ANTONIO">GONZALEZ GONZALEZ LUIS ANTONIO</option>
+                   <option value="GONZALEZ PEÑA SILVIA ENRIQUETA">GONZALEZ PEÑA SILVIA ENRIQUETA</option>
+                   <option value="GUERRERO OLIVARES JULIA DE LOS SANTOS ">GUERRERO OLIVARES JULIA DE LOS SANTOS</option>
+                   <option value="HERMOSILLO MARTINEZ ROCIO ALEJENDRA">HERMOSILLO MARTINEZ ROCIO ALEJENDRA</option>
+                   <option value="HERNÁNDEZ MARES JESSICA GUADALUPE">HERNÁNDEZ MARES JESSICA GUADALUPE</option>
+                   <option value="HERNANDEZ VARGAS JESUS AURELIO">HERNANDEZ VARGAS JESUS AURELIO</option>
+                   <option value="HUERTA QUINTANILLA DENISSE NATALY">HUERTA QUINTANILLA DENISSE NATALY</option>
+                   <option value="JARAMILLO IBARRA NANCY">JARAMILLO IBARRA NANCY</option>
+                   <option value="LOPEZ AVILES ELVA CONSUELO ">LOPEZ AVILES ELVA CONSUELO</option>
+                   <option value="LOPEZ OCHOA LIDIA BERENICE ">LOPEZ OCHOA LIDIA BERENICE</option>
+                   <option value="MARTINEZ FLORES LAURA JOSEFINA">MARTINEZ FLORES LAURA JOSEFINA</option>
+                   <option value="MARTINEZ MUÑOZ ELIZABETH">MARTINEZ MUÑOZ ELIZABETH</option>
+                   <option value="MEDELLÍN ZAPATA  LUIS ENRIQUE">MEDELLÍN ZAPATA  LUIS ENRIQUE</option>
+                   <option value="MESTA ORTIZ ABIUD ALEJANDRO">MESTA ORTIZ ABIUD ALEJANDRO</option>
+                   <option value="MIRANDA VAZQUEZ JOSE DE JESUS ">MIRANDA VAZQUEZ JOSE DE JESUS</option>
+                   <option value="MONTOYA MARTÍNEZ JOSÉ LUIS">MONTOYA MARTÍNEZ JOSÉ LUIS</option>
+                   <option value="NAVARRO CABALLERO ABRAHAM ">NAVARRO CABALLERO ABRAHAM</option>
+                   <option value="ONTIVEROS GAONA LUIS ALBERTO">ONTIVEROS GAONA LUIS ALBERTO</option>
+                   <option value="ONTIVEROS GAONA VERONICA">ONTIVEROS GAONA VERONICA</option>
+                   <option value="OVALLE REYNA OSCAR DE JESUS TRINIDAD ">OVALLE REYNA OSCAR DE JESUS TRINIDAD</option>
+                   <option value="PADILLA GUTIERREZ LIZBETH">PADILLA GUTIERREZ LIZBETH</option>
+                   <option value="QUIROZ RESENDIZ JESUS EDUARDO">QUIROZ RESENDIZ JESUS EDUARDO</option>
+                   <option value="RAMOS MARTINEZ MIGUEL ANGEL">RAMOS MARTINEZ MIGUEL ANGEL</option>
+                   <option value="RECIO MOREDO EDUARDO">RECIO MOREDO EDUARDO</option>
+                   <option value="RODRIGUEZ BARRIENTOS EDMUNDO">RODRIGUEZ BARRIENTOS EDMUNDO</option>
+                   <option value="RODRIGUEZ ESQUIVEL ENRIQUE ALONSO">RODRIGUEZ ESQUIVEL ENRIQUE ALONSO</option>
+                   <option value="RODRIGUEZ QUINTANILLA SERGIO CIPRIANO">RODRIGUEZ QUINTANILLA SERGIO CIPRIANO</option>
+                   <option value="ROQUE REYNA ARNOLD">ROQUE REYNA ARNOLD</option>
+                   <option value="RUANO OLVERA ELIZABETH">RUANO OLVERA ELIZABETH</option>
+                   <option value="SALAZAR CHAVEZ JESUS">SALAZAR CHAVEZ JESUS</option>
+                   <option value="SAN JUAN  RIVERA ILEANA  GISELA">SAN JUAN  RIVERA ILEANA  GISELA</option>
+                   <option value="SANCHEZ ESQUIVEL SAUL">SANCHEZ ESQUIVEL SAUL</option>
+                   <option value="SANCHEZ HERNANDEZ RAFAEL">SANCHEZ HERNANDEZ RAFAEL</option>
+                   <option value="TREVIÑO ALVARADO JUAN RENE">TREVIÑO ALVARADO JUAN RENE</option>
+                   <option value="VALENZUELA MURRILLO YENNY DEL CARMEN">VALENZUELA MURRILLO YENNY DEL CARMEN</option>
+                   <option value="VARGAS MARTÍNEZ MOISES ALEJANDRO">VARGAS MARTÍNEZ MOISES ALEJANDRO</option>
+                   <option value="VEGA HERNANDEZ JONNATHAN ISAAC ">VEGA HERNANDEZ JONNATHAN ISAAC</option>
+                   <option value="VILLARREAL NAVARRO CARLOS">VILLARREAL NAVARRO CARLOS</option>
+                </select>
+                <span class="error" id="error-asesor">Este campo es obligatorio</span>
             </div>
 
             <div class="col-md-6">
                 <label for="asesorSecundario" class="form-label">Asesor Secundario</label>
-                <input type="text" class="form-control" id="asesorSecundario" name="asesorSecundario">
+                <select id="asesorSecundario" class="form-select" name="asesorSecundario" required>
+                    <option value="">selecciona un asesor</option>
+                    <option value="ACUÑA LEAL DANIEL ARTURO">ACUÑA LEAL DANIEL ARTURO</option>
+                    <option value="ALFARO CARVAJAL REYNA ESTHER">ALFARO CARVAJAL REYNA ESTHER/option> 
+                    <option value="AQUINO ZUÑIGA JULIO CESAR">AQUINO ZUÑIGA JULIO CESAR</option>
+                    <option value="BERNAL ALONSO SERGIO">BERNAL ALONSO SERGIO</option>
+                    <option value="CABRERA RODRIGUEZ IRWINNG">CABRERA RODRIGUEZ IRWINNG</option>
+                    <option value="CARDENAS HERNANDEZ MARIA ISABEL">CARDENAS HERNANDEZ MARIA ISABEL</option>
+                    <option value="CARRETO LIMA  MARIA VALERIA">CARRETO LIMA  MARIA VALERIA</option>
+                    <option value="CONTRERAS BARRERA SANTIAGO">CONTRERAS BARRERA SANTIAGO</option>
+                    <option value="CRUZ IBARRA JUAN MANUEL">CRUZ IBARRA JUAN MANUEL</option>
+                    <option value="DE LA GARZA GARZA PEDRO">DE LA GARZA GARZA PEDRO</option>
+                    <option value="DE LA ROSA GAMES ALMA GLORIA">DE LA ROSA GAMES ALMA GLORIA</option>
+                    <option value="DIAZ GRACIA MARGARITA DE LA LUZ">DIAZ GRACIA MARGARITA DE LA LUZ</option>
+                    <option value="DOMÍNGUEZ GODÍNEZ JAIR OTHONIEL">DOMÍNGUEZ GODÍNEZ JAIR OTHONIEL</option>
+                    <option value="ELIZONDO ARRIAGA GUILLERMO DE JESUS">ELIZONDO ARRIAGA GUILLERMO DE JESUS</option>
+                    <option value="FLORES ALVARADO LILIAN">FLORES ALVARADO LILIAN </option>
+                    <option value="FLORES COLUNGA ALBERTO">FLORES COLUNGA ALBERTO</option>
+                    <option value="FRAGA LOPEZ URSULO">FRAGA LOPEZ URSULO</option>
+                    <option value="FUENTES RAMOS JOSÉ IGNACIO">FUENTES RAMOS JOSÉ IGNACIO</option>
+                    <option value="GALINDO ROMERO LUIS SERVANDO">GALINDO ROMERO LUIS SERVANDO</option>
+                    <option value="GALLEGOS GUERRERO CESAR RAUL">GALLEGOS GUERRERO CESAR RAUL</option>
+                    <option value="GARCIA MONTELONGO GILDARDO">GARCIA MONTELONGO GILDARDO</option>
+                    <option value="GARCIA MONTOYA SABAS J.">GARCIA MONTOYA SABAS J.</option>
+                    <option value="GARZA VILLARREAL GONZALO">GARZA VILLARREAL GONZALO</option>
+                    <option value="GONZALEZ GONZALEZ LUIS ANTONIO">GONZALEZ GONZALEZ LUIS ANTONIO</option>
+                    <option value="GONZALEZ PEÑA SILVIA ENRIQUETA">GONZALEZ PEÑA SILVIA ENRIQUETA</option>
+                    <option value="GUERRERO OLIVARES JULIA DE LOS SANTOS ">GUERRERO OLIVARES JULIA DE LOS SANTOS</option>
+                    <option value="HERMOSILLO MARTINEZ ROCIO ALEJENDRA">HERMOSILLO MARTINEZ ROCIO ALEJENDRA</option>
+                    <option value="HERNÁNDEZ MARES JESSICA GUADALUPE">HERNÁNDEZ MARES JESSICA GUADALUPE</option>
+                    <option value="HERNANDEZ VARGAS JESUS AURELIO">HERNANDEZ VARGAS JESUS AURELIO</option>
+                    <option value="HUERTA QUINTANILLA DENISSE NATALY">HUERTA QUINTANILLA DENISSE NATALY</option>
+                    <option value="JARAMILLO IBARRA NANCY">JARAMILLO IBARRA NANCY</option>
+                    <option value="LOPEZ AVILES ELVA CONSUELO ">LOPEZ AVILES ELVA CONSUELO</option>
+                    <option value="LOPEZ OCHOA LIDIA BERENICE ">LOPEZ OCHOA LIDIA BERENICE</option>
+                    <option value="MARTINEZ FLORES LAURA JOSEFINA">MARTINEZ FLORES LAURA JOSEFINA</option>
+                    <option value="MARTINEZ MUÑOZ ELIZABETH">MARTINEZ MUÑOZ ELIZABETH</option>
+                    <option value="MEDELLÍN ZAPATA  LUIS ENRIQUE">MEDELLÍN ZAPATA  LUIS ENRIQUE</option>
+                    <option value="MESTA ORTIZ ABIUD ALEJANDRO">MESTA ORTIZ ABIUD ALEJANDRO</option>
+                    <option value="MIRANDA VAZQUEZ JOSE DE JESUS ">MIRANDA VAZQUEZ JOSE DE JESUS</option>
+                    <option value="MONTOYA MARTÍNEZ JOSÉ LUIS">MONTOYA MARTÍNEZ JOSÉ LUIS</option>
+                    <option value="NAVARRO CABALLERO ABRAHAM ">NAVARRO CABALLERO ABRAHAM</option>
+                    <option value="ONTIVEROS GAONA LUIS ALBERTO">ONTIVEROS GAONA LUIS ALBERTO</option>
+                    <option value="ONTIVEROS GAONA VERONICA">ONTIVEROS GAONA VERONICA</option>
+                    <option value="OVALLE REYNA OSCAR DE JESUS TRINIDAD ">OVALLE REYNA OSCAR DE JESUS TRINIDAD</option>
+                    <option value="PADILLA GUTIERREZ LIZBETH">PADILLA GUTIERREZ LIZBETH</option>
+                    <option value="QUIROZ RESENDIZ JESUS EDUARDO">QUIROZ RESENDIZ JESUS EDUARDO</option>
+                    <option value="RAMOS MARTINEZ MIGUEL ANGEL">RAMOS MARTINEZ MIGUEL ANGEL</option>
+                    <option value="RECIO MOREDO EDUARDO">RECIO MOREDO EDUARDO</option>
+                    <option value="RODRIGUEZ BARRIENTOS EDMUNDO">RODRIGUEZ BARRIENTOS EDMUNDO</option>
+                    <option value="RODRIGUEZ ESQUIVEL ENRIQUE ALONSO">RODRIGUEZ ESQUIVEL ENRIQUE ALONSO</option>
+                    <option value="RODRIGUEZ QUINTANILLA SERGIO CIPRIANO">RODRIGUEZ QUINTANILLA SERGIO CIPRIANO</option>
+                    <option value="ROQUE REYNA ARNOLD">ROQUE REYNA ARNOLD</option>
+                    <option value="RUANO OLVERA ELIZABETH">RUANO OLVERA ELIZABETH</option>
+                    <option value="SALAZAR CHAVEZ JESUS">SALAZAR CHAVEZ JESUS</option>
+                    <option value="SAN JUAN  RIVERA ILEANA  GISELA">SAN JUAN  RIVERA ILEANA  GISELA</option>
+                    <option value="SANCHEZ ESQUIVEL SAUL">SANCHEZ ESQUIVEL SAUL</option>
+                    <option value="SANCHEZ HERNANDEZ RAFAEL">SANCHEZ HERNANDEZ RAFAEL</option>
+                    <option value="TREVIÑO ALVARADO JUAN RENE">TREVIÑO ALVARADO JUAN RENE</option>
+                    <option value="VALENZUELA MURRILLO YENNY DEL CARMEN">VALENZUELA MURRILLO YENNY DEL CARMEN</option>
+                    <option value="VARGAS MARTÍNEZ MOISES ALEJANDRO">VARGAS MARTÍNEZ MOISES ALEJANDRO</option>
+                    <option value="VEGA HERNANDEZ JONNATHAN ISAAC ">VEGA HERNANDEZ JONNATHAN ISAAC</option>
+                    <option value="VILLARREAL NAVARRO CARLOS">VILLARREAL NAVARRO CARLOS</option>
+                </select>
+                <span class="error" id="error-asesorSecundario">Este campo es obligatorio</span>
             </div>
+            <div class="col-6">
+                <p>Favor de indicar si su proyecto será presentado en inglés.</p>
+                   <div class="form-check form-check-inline">
+                      <input type="checkbox" class="form-check-input" name="chkIngles" id="chkIngles">Inglés
+                   </div>
+               </div>
 
             <div class="col-12">
                 <label for="descripcionProyecto" class="form-label">Descripción del Proyecto</label>
                 <textarea class="form-control" id="descripcionProyecto" name="descripcionProyecto" rows="3"
                     required></textarea>
+                    <span class="error" id="error-descripcionProyecto">Este campo es obligatorio</span>
             </div>
 
             <div class="col-12">
                 <label for="recursos" class="form-label">Recursos Necesarios</label>
-                <textarea class="form-control" id="recursos" name="recursos" rows="3"></textarea>
+                <textarea placeholder="internet,computadora,proyector,conexión eléctrica etc" class="form-control" id="recursos" name="recursos" rows="3"></textarea>
+                <span class="error" id="error-recursos">Este campo es obligatorio</span>
             </div>
 
             <div class="col-12 text-center">

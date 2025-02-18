@@ -52,6 +52,28 @@
                 <input type="text" class="form-control" id="proyecto" name="proyecto" required>
                 <span class="error" id="error-proyecto">Este campo es obligatorio</span>
             </div>
+            
+            <div class="col-md-6">
+                <label for="pefil" class="form-label">Indique el perfil al que pertenece el proyecto</label>
+                <select class="form-select" id="perfil" name="perfil" required>
+                  <option value="">Selecciona un perfil</option>
+                  <option value="Mecanico-Industrial">Mecánico-Industrial(Ingeniero Mecánico Administrador o Ingeniero Industrial y de Sistemas)</option>  
+                  <option value="Tecnologías de la información">Ingeniero Adminstrador de Sistemas o Licenciado en tecnologías de la información)</option>  
+                </select>
+                <span class="error" id="error-perfil">Este campo es obligatorio</span>
+            </div>
+            
+            <div class="col-md-6">
+                <label for="enfoque" class="form-label">Indique cual es el enfoque del proyecto</label>
+                <select class="form-select" id="enfoque" name="enfoque" required>
+                  <option value="">Selecciona un enfoque</option>
+                  <option value="Innovación">Innovación</option>  
+                  <option value="Sostenibilidad">Sostenibilidad</option>
+                  <option value="Social">De carácter social</option>  
+                  <option value="Prototipo">Diseñar o construir un dispositivo para una función específica</option>  
+                </select>
+                <span class="error" id="error-enfoque">Este campo es obligatorio</span>
+            </div>
 
             <div class="col-md-6">
                 <label for="representante" class="form-label">Representante</label>
@@ -259,6 +281,11 @@
             <div class="col-12 text-center">
                 <button type="button" onclick="registrar()" class="btn btn-primary">Enviar</button>
             </div>
+        </div>
+
+        <div class="text-center">
+            <img src="img/QR.png" alt="Feria de Proyectos de Ingeniería" class="img-fluid img-container mb-4"><br>
+            <a href="https://chat.whatsapp.com/GapJhj0dt5P9bFhibbFkis">liga para unirte al grupo de whatsapp.</a>
         </div>
     </div>
 

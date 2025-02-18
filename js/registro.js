@@ -36,7 +36,11 @@ function registrar() {
         "asesorSecundario":$('#asesorSecundario').val(),
         "descripcionProyecto":$('#descripcionProyecto').val(),
         "recursos":$('#recursos').val(),
-        "ingles": isChecked
+        "ingles": isChecked,
+        "proyecto":$('#proyecto').val(),
+        "perfil":$('#perfil').val(),
+        "enfoque":$('#enfoque').val()
+        
     }
     
     $.ajax({
@@ -74,6 +78,20 @@ function validaForm()
         esValido = false;
     } else {
         $("#error-equipo").hide();
+    }
+
+    if ($("#perfil").val().trim() === "") {
+        $("#error-perfil").show();
+        esValido = false;
+    } else {
+        $("#error-perfil").hide();
+    }
+
+    if ($("#enfoque").val().trim() === "") {
+        $("#error-enfoque").show();
+        esValido = false;
+    } else {
+        $("#error-enfoque").hide();
     }
 
     if ($("#proyecto").val().trim() === "") {

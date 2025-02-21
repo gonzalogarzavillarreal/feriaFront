@@ -19,9 +19,8 @@ function registrar() {
         return;
       }
 
-    //var url = "https://technological-mechelle-systemnet-882c82e8.koyeb.app/registros"; // URL del endpoint
-    var url = "http://localhost:8000/registros"; // URL del endpoint
-  
+    var url = "https://technological-mechelle-systemnet-882c82e8.koyeb.app/registros"; // URL del endpoint
+    
     let isChecked = $('#chkIngles').is(":checked");
 
     var data = {

@@ -21,10 +21,31 @@ footer{
 }
 
 .navbar {
-    background-color: red;
+    background-color: rgba(255,0,44,255);
 }
+
+.nav-link {
+    color: white;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transición suave */
+}
+
+.nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.856); /* Fondo ligeramente transparente */
+    border-radius: 5%;
+    color: red; /* Cambia el color del texto a rojo */
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    background-color: red; /* Color de fondo para el elemento activo */
+    color: white;
+}
+
+li {
+margin-right: 15px;
+}
+
 .navbar-brand img {
-    height: 50px;
+    height: 40px;
 }
 .footer {
     background-color: #1c1c1c;
@@ -51,3 +72,5 @@ img-container {
     font-size: 14px;
     display: none;
 }
+
+/*Index CSS*/

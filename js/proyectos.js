@@ -1,76 +1,54 @@
 $(document).ready(function () {
-    setFechaActual();
-}); 
+    getRegistros();
+});
 
 
-function setFechaActual() {
-    let hoy = new Date();
-    let fechaFormato = hoy.toISOString().split('T')[0]; // Formato YYYY-MM-DD
-    $('#fecha').val(fechaFormato);
-}
 
-var valida=true;
 
-function registrar() {
-
-      valida=validaForm();
-      if(valida==false)
-      {
-        return;
-      }
+function getRegistros() {
 
     //var url = "https://technological-mechelle-systemnet-882c82e8.koyeb.app/registros"; // URL del endpoint
     var url = "http://localhost:8000/registros"; // URL del endpoint
-  
-    let isChecked = $('#chkIngles').is(":checked");
 
-    var data = {
-        "id": "",
-        "equipo": $('#equipo').val(),
-        "fecha": $('#fecha').val(),
-        "proyecto":$('#proyecto').val(),
-        "representante":$('#representante').val(),
-        "carrera":$('#carrera').val(),
-        "tetra":$('#tetra').val(),
-        "turno":$('#turno').val(),
-        "asesor":$('#asesor').val(),
-        "asesorSecundario":$('#asesorSecundario').val(),
-        "descripcionProyecto":$('#descripcionProyecto').val(),
-        "recursos":$('#recursos').val(),
-        "ingles": isChecked,
-        "proyecto":$('#proyecto').val(),
-        "perfil":$('#perfil').val(),
-        "enfoque":$('#enfoque').val()
-        
-    }
-    
     $.ajax({
         url: url, // URL del endpoint
-        type: "POST", // Método HTTP
-        contentType: "application/json", // Tipo de contenido
-        data: JSON.stringify(data), // Convertir el objeto a JSON
-        success: function(response) {
-            $('#equipo').val('');
-            $('#proyecto').val('');
-            $('#representante').val('');
-            $('#carrera').val('');
-            $('#tetra').val('');
-            $('#turno').val('');
-            $('#asesor').val('');
-            $('#asesorSecundario').val('');
-            $('#descripcionProyecto').val('');
-            $('#recursos').val('');
-            $('#aviso').modal('show'); 
+        type: "GET",
+        contentType: "application/json",
+        data: {},
+        success: function (DBdata) {
+            $('#tblProyectos').DataTable({
+                destroy: true,
+                dom: 'Bfrtip',
+                buttons: [
+                    'copy', 'excel', 'pdf'
+                ],
+                language: {
+                    "url": "https://cdn.datatables.net/plug-ins/1.10.16/i18n/Spanish.json"
+                },
+                data: DBdata.registros,
+                columns: [
+                    { "data": "fecha" },
+                    { "data": "equipo" },
+                    { "data": "carrera" },
+                    { "data": "tetra" },
+                    { "data": "turno" },
+                    { "data": "proyecto" },
+                    { "data": "enfoque" },
+                    { "data": "perfil" },
+                    { "data": "asesor" },
+                    { "data": "asesorSecundario" },
+                ]
+            });
         },
-        error: function(xhr, status, error) {
+        error: function (xhr, status, error) {
             console.error("Error:", error);
         }
-    }); 
+    });
 
 }
 
-function validaForm()
-{
+
+function validaForm() {
     let esValido = true;
 
     if ($("#equipo").val().trim() === "") {

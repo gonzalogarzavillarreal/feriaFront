@@ -13,12 +13,28 @@ section{
     padding: 2em;
 }
 
-footer{
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color:black
-}
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+  
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .content {
+    flex: 1;
+  }
+  
+  footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+  }
+
 
 .navbar {
     background-color: rgba(255,0,44,255);

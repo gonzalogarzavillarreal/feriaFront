@@ -19,7 +19,7 @@ function registrar() {
         return;
       }
 
-    var url = "https://technological-mechelle-systemnet-882c82e8.koyeb.app/registros"; // URL del endpoint
+    var url = "https://technological-mechelle-systemnet-882c82e8.koyeb.app/registrosVerano2025"; // URL del endpoint
     
     let isChecked = $('#chkIngles').is(":checked");
 

@@ -2,9 +2,6 @@ $(document).ready(function () {
     getRegistros();
 });
 
-
-
-
 function getRegistros() {
 
     var url = "https://technological-mechelle-systemnet-882c82e8.koyeb.app/registrosVerano2025"; // URL del endpoint
@@ -34,8 +31,16 @@ function getRegistros() {
                     { "data": "proyecto" },
                     { "data": "enfoque" },
                     { "data": "perfil" },
+                    { "data": "asesor" },
+                    { "data": "asesorSecundario" },
+                    { "data": "url" },
                     { "data": "mesa" },
-                    { "data": "url" }
+                    {
+                        "data": "representante",
+                        "render": function (data, type, row) {
+                            return `<button class="btn btn-primary">Mesa</button>`;
+                        }
+                    } 
                 ]
             });
         },

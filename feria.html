@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feria de Proyectos de Ingeniería</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .gallery img {
+            width: 100%;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .lightbox img {
+            max-width: 90%;
+            max-height: 80%;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <img src="img/logo.png" alt="UMM" style="height: 100px; width: 200px;">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="nav nav-pill ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html"><i
+                                    class="fa fa-home"></i>&nbsp;Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="registro.html"><i
+                                    class="fa fa-home"></i>&nbsp;Registro</a></li>
+
+                        <li class="nav-item"><a class="nav-link" href="historia.html"><i
+                                    class="fa fa-picture-in-picture"></i>&nbsp;Comunidad</a></li>
+                        <li class="nav-item"><a class="nav-link" href="proyectos.html"><i
+                                    class="fa fa-picture-in-picture"></i>&nbsp;Proyectos</a></li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <article class="container mt-5">
+            <div class="text-center mb-4 p-5 bg-light rounded shadow">
+                <h2 class="display-5 text-primary">Feria de Proyectos de Ingeniería</h2>
+                <p class="lead text-secondary">
+                    Un espacio para el desarrollo de proyectos de ingeniería.
+                    La feria de proyectos refleja el compromiso de la facultad de ingeniería de la Universidad UMM con la excelencia educativa y la formación integral de sus estudiantes.
+                    Este evento es una plataforma donde los estudiantes de ingeniería pueden exhibir sus proyectos, compartir ideas innovadoras y conectar con la comunidad.
+                </p>
+                </div>
+        </article>
+        <div class="container mt-4">
+            <div class="container py-5">
+                  <div class="row gallery">
+                    <div class="col-md-3 mb-3">
+                        <img src="./img/feria5.jpeg" alt="Foto 1" onclick="openLightbox(this)">
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <img src="./img/feria2.jpeg" alt="Foto 2" onclick="openLightbox(this)">
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <img src="./img/feria3.jpeg" alt="Foto 3" onclick="openLightbox(this)">
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <img src="./img/feria4.jpeg" alt="Foto 3" onclick="openLightbox(this)">
+                    </div>
+                </div>
+                <div class="row gallery">
+                    <div class="col-md-3 mb-3">
+                        <img src="./img/feria6.jpeg" alt="Foto 1" onclick="openLightbox(this)">
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <img src="./img/feria7.jpeg" alt="Foto 2" onclick="openLightbox(this)">
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <img src="./img/feria8.jpeg" alt="Foto 3" onclick="openLightbox(this)">
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <img src="./img/feria9.jpeg" alt="Foto 3" onclick="openLightbox(this)">
+                    </div>
+                </div>
+            </div>
+    
+            <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+                <img id="lightbox-img" src="" alt="Foto Ampliada">
+            </div>
+    
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2025 Universidad UMM</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+</body>
+
+</html>

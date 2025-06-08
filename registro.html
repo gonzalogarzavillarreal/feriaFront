@@ -24,6 +24,8 @@
                 <ul class="nav nav-pill ms-auto">
                     <li class="nav-item"><a class="nav-link" href="index.html"><i
                                 class="fa fa-home"></i>&nbsp;Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="registro.html"><i
+                                class="fa fa-home"></i>&nbsp;Registro</a></li>
                     <li class="nav-item"><a class="nav-link" href="historia.html"><i
                                 class="fa fa-picture-in-picture"></i>&nbsp;Comunidad</a></li>
                     <li class="nav-item"><a class="nav-link" href="proyectos.html"><i
@@ -269,7 +271,12 @@
                     <input type="checkbox" class="form-check-input" name="chkIngles" id="chkIngles">Inglés
                 </div>
             </div>
-
+            <div class="col-12">
+                <label for="url" class="form-label">URL del Proyecto</label>
+                <input type="url" class="form-control" id="url" name="URL" rows="3"
+                    required></input>
+                <span class="error" id="error-url">Este campo es obligatorio</span>
+            </div>
             <div class="col-12">
                 <label for="descripcionProyecto" class="form-label">Descripción del Proyecto</label>
                 <textarea class="form-control" id="descripcionProyecto" name="descripcionProyecto" rows="3"

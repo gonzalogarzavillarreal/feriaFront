@@ -7,8 +7,8 @@ $(document).ready(function () {
 
 function getRegistros() {
 
-    var url = "https://technological-mechelle-systemnet-882c82e8.koyeb.app/registrosVerano2025"; // URL del endpoint
-   
+    var url = "https://technological-mechelle-systemnet-882c82e8.koyeb.app/registros"; // URL del endpoint
+   //var url = "http://localhost:8000/registros"; //
     $.ajax({
         url: url, // URL del endpoint
         type: "GET",

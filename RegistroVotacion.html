@@ -49,7 +49,7 @@
                          <div class="card-body text-center">
                             <h5 class="card-title">Estudiante</h5>
                             <p class="card-text">Regístrate como estudiante y participa en todas las actividades del congreso.</p>
-                            <a href="#" data-bs-toggle="modal" data-bs-target="#registroModal" class="btn btn-primary">Registrar como Profesor</a>
+                            <a href="#" onclick="categoria('Estudiante')" data-bs-toggle="modal" data-bs-target="#registroModal" class="btn btn-primary">Registrar como Profesor</a>
                         </div>
                     </div>
                 </div>
@@ -59,7 +59,7 @@
                          <div class="card-body text-center">
                             <h5 class="card-title">Profesor</h5>
                             <p class="card-text">Regístrate como profesor y guía a tus estudiantes en el evento.</p>
-                            <a href="#" data-bs-toggle="modal" data-bs-target="#registroModal" class="btn btn-primary">Registrar como Profesor</a>
+                            <a href="#" onclick="categoria('Profesor')" data-bs-toggle="modal" data-bs-target="#registroModal" class="btn btn-primary">Registrar como Profesor</a>
                         </div>
                     </div>
                 </div>
@@ -69,7 +69,7 @@
                          <div class="card-body text-center">
                             <h5 class="card-title">Invitado</h5>
                             <p class="card-text">Regístrate como invitado y disfruta de las actividades del congreso.</p>
-                            <a href="#" data-bs-toggle="modal" data-bs-target="#registroModal" class="btn btn-primary">Registrar como Profesor</a>
+                            <a href="#" onclick="categoria('Invitado')" data-bs-toggle="modal" data-bs-target="#registroModal" class="btn btn-primary">Registrar como Profesor</a>
                         </div>
                     </div>
                 </div>
@@ -84,15 +84,15 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <form>
+                <div>
                     <div class="mb-3">
                         <label for="email" class="form-label">Correo Electrónico</label>
                         <input type="email" class="form-control" id="email" placeholder="Ingresa tu correo" required>
                     </div>
                     <div class="d-grid">
-                        <button type="submit" class="btn btn-primary">Registrar</button>
+                        <button type="button" onclick="registrar()" class="btn btn-primary">Registrar</button>
                     </div>
-                </form>
+                </div>
             </div>
         </div>
     </div>
@@ -101,11 +101,30 @@
     <footer>
         <p>&copy; 2025 Universidad UMM</p>
     </footer>
+
+    <div id="aviso" class="modal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">UMM | Registro de feria</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>¡Muchas gracias por registrarse!.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.js"
         integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+     <script src="js/registroVotacion.js"></script>
 </body>
 
 </html>

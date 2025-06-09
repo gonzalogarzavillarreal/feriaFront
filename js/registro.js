@@ -19,7 +19,8 @@ function registrar() {
         return;
       }
 
-    var url = "https://technological-mechelle-systemnet-882c82e8.koyeb.app/registrosVerano2025"; // URL del endpoint
+      var url = "https://technological-mechelle-systemnet-882c82e8.koyeb.app/registros"; // URL del endpoint
+     //var url = "http://localhost:8000/registros"; // URL del endpoint
     
     let isChecked = $('#chkIngles').is(":checked");
 
@@ -39,8 +40,9 @@ function registrar() {
         "ingles": isChecked,
         "proyecto":$('#proyecto').val(),
         "perfil":$('#perfil').val(),
-        "enfoque":$('#enfoque').val()
-        
+        "enfoque":$('#enfoque').val(),
+        "url":$('#url').val(),
+        "mesa":"" 
     }
     
     $.ajax({
@@ -59,6 +61,7 @@ function registrar() {
             $('#asesorSecundario').val('');
             $('#descripcionProyecto').val('');
             $('#recursos').val('');
+            $('#url').val('');
             $('#aviso').modal('show'); 
         },
         error: function(xhr, status, error) {

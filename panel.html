@@ -39,47 +39,43 @@
         </nav>
         <div class="container mt-5">
             <div class="row justify-content-center">
-                <div class="col-md-6">
-                    <div class="card shadow-lg">
+                <div class="col-md-8">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4>Panel de Administración</h4>
+                        </div>
                         <div class="card-body">
-                            <h3 class="text-center text-primary mb-4">Iniciar Sesión</h3>
-                            <form>
-                                <div class="mb-3">
-                                    <label for="email" class="form-label">Correo Electrónico</label>
-                                    <input type="email" class="form-control" id="user" placeholder="Ingresa tu usuario" required>
+                            <p>Bienvenido al panel de administración de la feria de proyectos de Ingeniería.</p>
+                            <div class="row p-3">
+                                <div class="col-md-4">
+                                    <a href="proyectosAdmin.html" class="btn btn-primary">Asignar Mesa</a>
                                 </div>
-                                <div class="mb-3">
-                                    <label for="password" class="form-label">Contraseña</label>
-                                    <input type="password" class="form-control" id="pass" placeholder="Ingresa tu contraseña" required>
+                                <div class="col-md-4">
+                                    <div class="form-check form-switch">
+                                        <input class="form-check-input" onchange="cambiarVotacion()" type="checkbox" id="Votación" Unchecked>
+                                        <label class="form-check-label" for="flexSwitchCheckChecked">Votación
+                                        </label>
+                                    </div>
                                 </div>
-                                <div class="d-grid">
-                                    <button type="button" onclick="valida();" class="btn btn-primary">Iniciar Sesión</button>
+
+                            </div>
+                            <div class="row p-3">
+                                <div class="col-md-4">
+                                    <a href="RegistroVotacion.html" class="btn btn-primary">Ver Registos de votación</a>
                                 </div>
-                            </form>
+                            </div>
+                            <div class="row p-3">
+                                <div class="col-md-4">
+                                    <a href="resultados.html" class="btn btn-primary">Ver Resultados</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-      
+
     </div>
-
-
-    <div id="aviso" class="modal" tabindex="-1">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">UMM</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <p>El usuario o la contraseña son incorrectos.</p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                </div>
-            </div>
-        </div>
     <footer>
         <p>&copy; 2025 Universidad UMM</p>
     </footer>
@@ -88,7 +84,7 @@
         crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.js"
         integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
-    <script src="js/login.js"></script>
+        <script src="js/panel.js"></script>
 </body>
 
 </html>

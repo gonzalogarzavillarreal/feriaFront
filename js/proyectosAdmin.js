@@ -2,10 +2,28 @@ $(document).ready(function () {
     getRegistros();
 });
 
+
+$('#tblProyectos').on('click', '.btn-ejecutar', function () {
+    // Encuentra la fila (tr) que contiene el botón
+    var fila = $(this).closest('tr');
+
+    // Toma el valor de la primera columna (por índice, 0 es la primera)
+    var id = fila.find('td:eq(0)').text();
+    // Llama a tu función personalizada (si aplica)
+    updateRegistro(id);
+});
+
+function updateRegistro(id) {
+    $('#Asignar').modal('show');
+     localStorage.setItem('id', id);
+}
+
+
 function getRegistros() {
 
-    var url = "https://technological-mechelle-systemnet-882c82e8.koyeb.app/registrosVerano2025"; // URL del endpoint
-   
+    var url = "https://technological-mechelle-systemnet-882c82e8.koyeb.app/registros"; // URL del endpoint
+   //var url = "http://localhost:8000/registros"; // URL del endpoint
+
     $.ajax({
         url: url, // URL del endpoint
         type: "GET",
@@ -23,6 +41,7 @@ function getRegistros() {
                 },
                 data: DBdata.registros,
                 columns: [
+                    { "data": "id" },
                     { "data": "fecha" },
                     { "data": "equipo" },
                     { "data": "carrera" },
@@ -33,14 +52,15 @@ function getRegistros() {
                     { "data": "perfil" },
                     { "data": "asesor" },
                     { "data": "asesorSecundario" },
+                    { "data": "descripcionProyecto" },
                     { "data": "url" },
                     { "data": "mesa" },
                     {
-                        "data": "representante",
+                        "data": "",
                         "render": function (data, type, row) {
-                            return `<button class="btn btn-primary">Mesa</button>`;
+                            return `<button class="btn btn-primary btn-ejecutar">Mesa</button>`;
                         }
-                    } 
+                    }
                 ]
             });
         },
@@ -51,6 +71,28 @@ function getRegistros() {
 
 }
 
+
+function Update() { 
+    let id= localStorage.getItem('id');
+    let mesa=$('#mesa').val();
+      var url = `https://technological-mechelle-systemnet-882c82e8.koyeb.app/UpdateRegistros/${id}/${mesa}`; // URL del endpoint
+     //var url = `http://localhost:8000/UpdateRegistros/${id}/${mesa}`; // URL del endpoint
+    
+    $('#Asignar').modal('hide');
+    $.ajax({
+        url: url, // URL del endpoint
+        type: "GET", // Método HTTP
+        contentType: "application/json", // Tipo de contenido
+        data: {}, // Convertir el objeto a JSON
+        success: function(response) {
+            getRegistros();
+        },
+        error: function(xhr, status, error) {
+            console.error("Error:", error);
+        }
+    }); 
+
+}
 
 function validaForm() {
     let esValido = true;
